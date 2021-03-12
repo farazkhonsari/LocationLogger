@@ -14,8 +14,8 @@ plugins {
     `java-library`
 }
 
-group = "com.github.jitpack"
-version = "0.0.2"
+group = "com.github.farazkhonsari"
+version = "0.0.3"
 repositories {
     // Use jcenter for resolving dependencies.
     // You can declare any Maven/Ivy/file repository here.
