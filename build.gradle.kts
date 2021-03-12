@@ -7,7 +7,9 @@
 plugins {
     // Apply the Kotlin JVM plugin to add support for Kotlin.
     id("org.jetbrains.kotlin.jvm") version "1.3.72"
-    id("maven-publish")
+    id("com.github.dcendents.android-maven") version "2.1"
+
+
     // Apply the java-library plugin for API and implementation separation.
     `java-library`
 }
@@ -19,12 +21,17 @@ repositories {
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
     google()
+    maven {
+        url = uri("https://plugins.gradle.org/m2/")
+    }
     maven { url = uri("https://jitpack.io") }
 
 }
 
 dependencies {
     // Align versions of all Kotlin components
+    implementation(platform("com.github.dcendents:android-maven-gradle-plugin:2.1"))
+
 
     implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
     // Use the Kotlin JDK 8 standard library.
